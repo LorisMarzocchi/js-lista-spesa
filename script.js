@@ -16,20 +16,21 @@ const listaSpesa = document.querySelector('#list');
   
   // newItem
   // const btn = document.addEventListener('#addBtn');
-let i = 0;
-function myFunction() {
+  function myFunction() {
+      
+      let nome = document.getElementById("myText").value;
+      arrList.push(nome);
+      alert('oggetto aggiunto');
+      
+    }
+    function myFunction2 (){
+        let i = 0;
+        while (i < arrList.length) {
+            
+        // console.log('con while');
+        listaSpesa.innerHTML += `<li> ${arrList[i]}</li>`;
+        i++;
+    }
 
-    let nome = document.getElementById("myText").value;
-    arrList.push(nome);
-    console.log(arrList);
-    listaSpesa.innerHTML += `<li> ${arrList[i]}</li>`;
-    i++;
-}
-while (i < arrList.length) {
-
-    // console.log('con while');
-    listaSpesa.innerHTML += `<li> ${arrList[i]}</li>`;
-    i++;
-}
-  
+} 
 
